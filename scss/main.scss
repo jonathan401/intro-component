@@ -129,6 +129,7 @@
 
   .form-group {
     #password {
+      background-image: none;
       & ~ .password-length {
         font-size: 0.8rem;
         // display: block;
@@ -146,16 +147,16 @@
       }
     }
 
-    .error-image {
-      position: relative;
-      display: inline;
-      opacity: 0;
-      margin-left: -50px;
-      img {
-        position: absolute;
-        top: 5%;
-      }
-    }
+    // .error-image {
+    //   position: relative;
+    //   display: inline;
+    //   opacity: 0;
+    //   margin-left: -50px;
+    //   img {
+    //     position: absolute;
+    //     top: 5%;
+    //   }
+    // }
 
     .message {
       color: $red;
@@ -178,7 +179,12 @@
     outline: 0;
     width: 100%;
     background-color: #fff;
+    // position: left;
     border: 1px solid $grayish-blue;
+    background-image: url('../images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px top 40%;
+    background-size: 0;
     border-radius: 4px;
     padding: 0.7rem 1rem;
     transition: border 0.15s, box-shadow 0.15s;
@@ -194,6 +200,7 @@
     }
 
     &.valid {
+      background-size: 0;
       border-color: $green;
       background-image: none;
       box-shadow: 0 0 3px 1px $green;
@@ -207,6 +214,7 @@
     &.invalid {
       border-color: $red;
       box-shadow: 0 0 3px 1px $red;
+      background-size: auto;
 
       & + .error-image {
         opacity: 1;

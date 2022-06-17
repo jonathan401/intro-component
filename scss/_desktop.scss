@@ -11,11 +11,12 @@
     max-width: none;
     align-items: stretch;
     margin-top: 1rem;
-    padding: 5rem;
+    padding: 7rem;
     flex-direction: row;
 
     & header {
       max-width: 50%;
+      margin-right: 3rem;
       align-self: center;
       text-align: initial;
 
