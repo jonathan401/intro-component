@@ -57,7 +57,7 @@ To see how you can add code snippets, see below:
 ### Useful resources
 
 - [Password visibility toggle placement](https://www.csestack.org/hide-show-password-eye-icon-html-javascript/) - This article helped me place the eye visibility icon on the password input field
-- [Password Reges pattern](https://gist.github.com/HarishChaudhari/0dd5514ce430991a1b1b8fa04e8b72a4) - This is was where I got the regex pattern for the a strong password from. I'd recommend it to anyone still learning this concept.
+- [Password Reges pattern](https://gist.github.com/HarishChaudhari/0dd5514ce430991a1b1b8fa04e8b72a4) - This is was where I got the regex pattern for the a strong password from. I'd recommend it to anyone still learning this concept. -[Placing images in input fields](https://www.youtube.com/watch?v=7C86JVJd2no) - This youtube video helped me to place the error icons in the input field.
 
 ## Author
 
