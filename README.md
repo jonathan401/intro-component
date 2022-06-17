@@ -62,7 +62,7 @@ To see how you can add code snippets, see below:
 ## Author
 
 - Website - [Jonathan at Github](https://github.com/jonathan401)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/jonathan401)
+- Frontend Mentor - [@jonathan401](https://www.frontendmentor.io/profile/jonathan401)
 
 ## Acknowledgments
 
