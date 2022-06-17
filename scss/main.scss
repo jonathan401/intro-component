@@ -1,0 +1,236 @@
+@import 'variables';
+@import 'mixins';
+@import 'button';
+@import 'global';
+
+// hide class
+.hidden {
+  display: none !important;
+}
+
+// modal
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex-display(row, center, center);
+
+  .modal {
+    max-width: 300px;
+    border-radius: $border-radius-size;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .fa-xmark {
+      position: absolute;
+      cursor: pointer;
+      top: 20px;
+      right: 20px;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $blue;
+      text-transform: uppercase;
+    }
+
+    p {
+      padding: 1rem 0;
+      position: relative;
+      bottom: 1rem;
+      // margin-bottom: -10px;
+      color: $blue;
+      font-weight: 500;
+      text-align: center;
+
+      .fa-circle-check {
+        margin-left: 0.4rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.intro {
+  max-width: 375px;
+  margin: 0 auto;
+  @include flex-display(column, center, center);
+
+  // .hidden {
+  //   display: none !important;
+  // }
+
+  header {
+    text-align: center;
+    margin: 3rem 0;
+    color: #fff;
+
+    .intro-header-main {
+      font-size: 1.3rem;
+      padding: 0 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-lead-main {
+      font-size: 0.9rem;
+    }
+  }
+
+  .sign-up-card {
+    border-radius: $border-radius-size;
+
+    & .pricing {
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 400;
+      @include bottomShadow(0, 7px);
+      margin-bottom: 1.5rem;
+
+      & .emphasis {
+        font-weight: 600;
+      }
+    }
+
+    #sign-up {
+      @include bottomShadow(0, 7px);
+      background-color: #fff;
+      padding: 1.2rem;
+      border-radius: $border-radius-size;
+
+      & label {
+        display: none;
+      }
+
+      & .consent {
+        padding: 0 1rem;
+        text-align: center;
+        color: $grayish-blue;
+        font-weight: 600;
+        font-size: 0.6rem;
+
+        .highlight {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .form-group,
+  .submit-btn {
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    #password {
+      & ~ .password-length {
+        font-size: 0.8rem;
+        // display: block;
+        text-align: right;
+        font-family: inherit;
+        font-weight: 600;
+        color: $blue;
+      }
+
+      & + i {
+        margin-left: -50px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: $blue;
+      }
+    }
+
+    .error-image {
+      position: relative;
+      display: inline;
+      opacity: 0;
+      margin-left: -50px;
+      img {
+        position: absolute;
+        top: 5%;
+      }
+    }
+
+    .message {
+      color: $red;
+      margin-top: 0.3rem;
+      height: 0;
+      opacity: 0;
+      text-align: right;
+      font-family: inherit;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 0.7rem;
+    }
+  }
+
+  & .form-control {
+    height: 100%;
+    color: $dark-blue;
+    font-family: inherit;
+    font-weight: 600;
+    outline: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $grayish-blue;
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    transition: border 0.15s, box-shadow 0.15s;
+
+    &::placeholder {
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    &:focus {
+      border: 1px solid $grayish-blue;
+      box-shadow: 0 0 3px 1px $grayish-blue;
+    }
+
+    &.valid {
+      border-color: $green;
+      background-image: none;
+      box-shadow: 0 0 3px 1px $green;
+
+      & ~ .message {
+        opacity: 0;
+        height: 0;
+      }
+    }
+
+    &.invalid {
+      border-color: $red;
+      box-shadow: 0 0 3px 1px $red;
+
+      & + .error-image {
+        opacity: 1;
+      }
+    }
+
+    &.invalid ~ .message {
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  & input[type='submit'] {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: 1px;
+    box-shadow: 0 -3px 0 0 $shadow-color inset;
+    text-transform: uppercase;
+
+    &:focus {
+      border: 3px dotted $grayish-blue;
+    }
+  }
+}
+
+@import 'desktop';

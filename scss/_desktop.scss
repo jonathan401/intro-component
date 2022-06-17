@@ -1,0 +1,55 @@
+// desktop
+@media screen and (min-width: 900px) {
+  .modal-wrapper {
+    .modal {
+      max-width: none;
+      width: 500px;
+    }
+  }
+
+  .intro {
+    max-width: none;
+    align-items: stretch;
+    margin-top: 1rem;
+    padding: 5rem;
+    flex-direction: row;
+
+    & header {
+      max-width: 50%;
+      align-self: center;
+      text-align: initial;
+
+      .intro-header-main {
+        padding: 0;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+      }
+
+      .intro-lead-main {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+
+    .sign-up-card {
+      max-width: 47%;
+      & .pricing {
+        font-size: 1rem;
+      }
+
+      #sign-up {
+        padding: 2.5rem;
+
+        & .consent {
+          font-size: 0.7rem;
+        }
+      }
+
+      .form-control {
+        padding: 1.1rem 1.5rem;
+      }
+    }
+  }
+}

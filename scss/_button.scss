@@ -1,0 +1,39 @@
+%btn {
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+}
+
+// @function lightenOnHover($main-color, $amount) {
+//   @return lighten($main-color, $amount);
+// }
+
+.btn {
+  @extend %btn;
+  outline: 0;
+  border-radius: $border-radius-size;
+  font-family: inherit;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $blue;
+
+  &:hover {
+    background-color: lighten($blue, 10%);
+  }
+}
+
+.btn-secondary {
+  @extend %btn;
+  background-color: $green;
+  &:hover {
+    background-color: lighten($green, 10%);
+  }
+}

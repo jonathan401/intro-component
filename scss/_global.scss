@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: $base-font-size;
+  padding: 1rem;
+  line-height: 1.5;
+  @include flex-display(row, center, center);
+  background: $red url('../images/bg-intro-mobile.png') no-repeat center;
+  background-size: cover;
+
+  @media screen and (min-width: 900px) {
+    padding: 0rem;
+    @include flex-display(row, center, center);
+    // background: $red url('../images/bg-intro-desktop.png') no-repeat center;
+    background-image: url('../images/bg-intro-desktop.png');
+  }
+}
+
+// links
+a {
+  text-decoration: none;
+}
+
+// buttons
+button {
+  border: none;
+  outline: 0;
+}

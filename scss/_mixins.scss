@@ -1,0 +1,16 @@
+// flex
+@mixin flex-display($direction, $justify-dir, $align-dir) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-dir;
+  align-items: $align-dir;
+}
+
+@mixin bottomShadow($x, $y) {
+  box-shadow: $x $y 0 0 $shadow-color;
+}
+
+// @mixin bottomShadow($args...) {
+//   // box-shadow: $x $y 0 0 rgba(0, 0, 0, 0.2) $inset;
+//   box-shadow: $args;
+// }

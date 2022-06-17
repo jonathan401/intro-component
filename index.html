@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="modal-wrapper hidden">
+        <div class="modal">
+          <i class="fa-solid fa-xmark"></i>
+          <img src="./images/checklist.jpg" alt="" />
+          <p>Sign Up complete <span class="fa-solid fa-circle-check"></span></p>
+        </div>
+      </section>
+      <section class="intro">
+        <header>
+          <h1 class="intro-header-main">Learn to code by watching others.</h1>
+          <p class="intro-lead-main">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </header>
+        <div class="sign-up-card">
+          <button class="pricing btn btn-full btn-primary">
+            <span class="emphasis">Try it free 7 days</span> then $20/mo.
+            thereafter.
+          </button>
+          <form id="sign-up">
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input
+                id="firstname"
+                type="text"
+                class="form-control"
+                required
+                name="firstname"
+                placeholder="first name"
+              />
+              <div class="error-image">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+              <p class="message">
+                Must be made of alphabets, not contain numbers and contain 5-12
+                characters
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input
+                id="lastname"
+                type="text"
+                class="form-control"
+                required
+                name="lastname"
+                placeholder="last name"
+              />
+              <div class="error-image">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+              <p class="message">
+                Must be made of alphabets, not contain numbers and contain 5-12
+                characters
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                class="form-control"
+                required
+                name="email"
+                placeholder="email address"
+              />
+              <div class="error-image">
+                <img src="./images/icon-error.svg" alt="" />
+              </div>
+              <p class="message">
+                Must be a valid email address e.g 'johndoe@email.com'
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                class="form-control"
+                required
+                name="password"
+                placeholder="password"
+              />
+              <i
+                ><span class="fa-solid fa-eye-slash" id="password-toggle"></span
+              ></i>
+              <p class="message">
+                Must be at least 8 characters, be alphanumeric and contain
+                special characters as well as uppercase and lowercase letters
+                e.g !@#$%^&*
+              </p>
+              <span class="password-length">password length: </span>
+            </div>
+            <div class="submit-btn">
+              <input
+                type="submit"
+                class="btn btn-secondary btn-full"
+                value="Claim your free trial"
+              />
+            </div>
+            <div class="consent">
+              <p>
+                By clicking the button, you are agreeing to our
+                <a href="#" class="highlight">Terms and Services</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
