@@ -19,8 +19,8 @@ const validateInputs = (inputField, regex) => {
 
 // regex pattern
 const pattern = {
-  firstname: /^([A-Z][a-z]){2,}$/,
-  lastname: /^([A-Z][a-z]){2,}$/,
+  firstname: /^[A-Z][a-z]{1,}$/,
+  lastname: /^[A-Z][a-z]{1,}$/,
   email: /^([a-zA-Z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
   password: /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
 };
